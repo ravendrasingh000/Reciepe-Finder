@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe.com</title>
+  <link rel="icon" type="image/png" href="images/1f957.png">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+=======
+<link rel="stylesheet" href="style.css">
+>>>>>>> c873484 (HTML CSS code push at one time)
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header class="sticky-header">
+      <h1>🥗 Choose Your Recipe</h1>
+      <div class="total-calories">
+        <span>Total Favorites Calories: </span>
+        <span id="totalCalories">0</span>
+      </div>
+    </header>
+
+    <div class="search-container sticky-search">
+      <input type="text" id="searchInput" placeholder="Search recipes or ingredients...">
+      <button id="searchBtn"><i class="fas fa-search"></i></button>
+    </div>
+
+    <button id="addRecipeBtn" class="btn primary">
+      <i class="fas fa-plus"></i> Add New Recipe
+    </button>
+
+    <div id="recipeForm" class="modal">
+      <div class="modal-content">
+        <h2 id="formTitle">Add New Recipe</h2>
+        <form id="recipeFormElement">
+          <input type="hidden" id="recipeId">
+          <div class="form-group">
+            <label for="recipeName">Recipe Name</label>
+            <input type="text" id="recipeName" required>
+          </div>
+          <div class="form-group">
+            <label for="ingredients">Ingredients (comma separated)</label>
+            <textarea id="ingredients" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="calories">Calories</label>
+            <input type="number" id="calories" required min="0">
+          </div>
+          <div class="form-actions">
+            <button type="button" id="cancelBtn" class="btn secondary">Cancel</button>
+            <button type="submit" class="btn primary">Save Recipe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="recipesContainer" class="recipes-grid">
+      <!-- Recipe cards render here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
